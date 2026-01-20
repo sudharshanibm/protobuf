@@ -72,6 +72,14 @@ platform(
     ],
 )
 
+platform(
+    name = "s390x_linux",
+    constraint_values = [
+        "@platforms//cpu:s390x",
+        "@platforms//os:linux",
+    ],
+)
+
 config_setting(
     name = "aarch64",
     values = {"cpu": "linux-aarch_64"},

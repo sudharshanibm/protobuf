@@ -54,6 +54,13 @@
 #else
 #define GOOGLE_PROTOBUF_ARCH_32_BIT 1
 #endif
+#elif defined(__s390x__) || defined(__s390__)
+#define GOOGLE_PROTOBUF_ARCH_S390 1
+#if defined(__s390x__)
+#define GOOGLE_PROTOBUF_ARCH_64_BIT 1
+#else
+#define GOOGLE_PROTOBUF_ARCH_32_BIT 1
+#endif
 #elif defined(_POWER) || defined(__powerpc64__) || defined(__PPC64__)
 #define GOOGLE_PROTOBUF_ARCH_POWER 1
 #define GOOGLE_PROTOBUF_ARCH_64_BIT 1
